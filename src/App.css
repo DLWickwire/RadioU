@@ -6,9 +6,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-p{
@@ -27,7 +24,6 @@
   font-size: 15rem;
   color: rgb(255, 0, 242);
   text-shadow: 3px 3px black;
-  margin-bottom: 2rem;
   letter-spacing: 2px;
 }
 
@@ -35,15 +31,15 @@
   background-color: rgb(132, 0, 255);
   color: white;
   border: none;
-  padding: 1.2rem 3rem;
-  font-size: 2rem;
+  padding: 20px, 20px;
+  font-size: 24px;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .hero-button:hover {
-  background-color: #ff4d4d;
+  background-color: #000000;
   transform: scale(1.05);
 }
 
