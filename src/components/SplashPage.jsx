@@ -3,7 +3,7 @@ export default function SplashPage({ setPage }) {
         <div className="hero-image">
             <div className="hero-overlay">
                 <h1 className="hero-title">FreqFinder</h1>
-                <p className="hero-p">The easiest way to get your music heard</p>
+                <p className="hero-p">The solution to getting your music heard</p>
                 <button
                     className="hero-button"
                     onClick={() => setPage("stations")}

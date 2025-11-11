@@ -10,7 +10,7 @@ export default function ApplicationList() {
     useEffect(() => {
         fetchApplications();
     }, []);
-    //gets all myt band apps from supabase and the details on stations it was sent to then combines it all and shows me it
+    //gets all my band apps from supabase and the details on stations it was sent to then combines it all and shows me it
     async function fetchApplications() {
         try {
             const { data, error } = await supabase //this gets my stuff from supabase
@@ -66,8 +66,12 @@ export default function ApplicationList() {
     }
 
     if (loading) return <p>Loading your applications...</p>;
+
     //simple reduction that basically just counts how many applications there are currently
-    const totalApplications = applications.reduce((count) => count + 1, 0);
+    let totalApplications = 0;
+    for (let i = 0; i < applications.length; i++) {
+        totalApplications += 1;
+    }
 
     // this retrun renders out all of my app data and also lets me delete entries
     return (
