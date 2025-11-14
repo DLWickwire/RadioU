@@ -44,7 +44,7 @@ export default function ApplicationForm({ selectedStation, setPage }) {
                 .insert([newApp])
                 .select();
 
-            // Handle results
+            // Handles my results
             if (error) {
                 console.error(" Supabase insert error:", error);
                 setMessage(
@@ -54,7 +54,7 @@ export default function ApplicationForm({ selectedStation, setPage }) {
                 console.log("Submitted successfully:", data);
                 setMessage(`Application submitted to ${selectedStation.name}!`);
 
-                // Clear form
+                // Clear form with nothing on it
                 setBandName("");
                 setGenre("");
                 setLocation("");
@@ -72,7 +72,7 @@ export default function ApplicationForm({ selectedStation, setPage }) {
         <div className="form-container">
             <h1>Apply to {selectedStation.name}</h1>
 
-            {/* Simple form layout */}
+            {/* form layouts */}
             <form onSubmit={handleSubmit}>
                 <input
                     type="text"

@@ -26,11 +26,11 @@ export default function ApplicationList() {
                     );
                     const [station] = await res.json();
                     return {
-                        //this lets me add or replace stuff
+                        //this lets me add or replace stuff taking every app object and returning a new object with all 
                         ...app,
-                        station_name: station?.name || "Unknown Station",
-                        station_country: station?.country || "Unknown Country",
-                        station_url: station?.homepage || "",
+                        station_name: station?.name ?? "Unknown Station",
+                        station_country: station?.country ?? "Unknown Country",
+                        station_url: station?.homepage ?? "",
                     };
                 })
             );
@@ -67,7 +67,7 @@ export default function ApplicationList() {
 
     if (loading) return <p>Loading your applications...</p>;
 
-    //simple reduction that basically just counts how many applications there are currently
+    //reduction for loop that basically just counts how many applications there are currently
     let totalApplications = 0;
     for (let i = 0; i < applications.length; i++) {
         totalApplications += 1;
