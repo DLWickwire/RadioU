@@ -7,4 +7,4 @@ export default function Navbar({ setPage }) {
     </nav>
   );
 }
-//all just lets me have the ability to navigate through my components(pages)
+//all just lets me have the ability to navigate through my components(pages) shout out alphonso for doin this in the hackathon 
